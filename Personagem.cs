@@ -58,7 +58,7 @@ namespace SistemaDePersonagens
         #region Construtor
         public Personagem(string nome, int poderAtaque, int pontosVida, int nivel, int experiencia)
         {
-            Nome = "Atrus";
+            Nome = nome;
             PoderAtaque = 25;
             PontosVida = 100;
             Nivel = 1;
@@ -75,7 +75,7 @@ namespace SistemaDePersonagens
         }
         public void ReceberDano(int dano)
         {
-            if (PontosVida < 0)
+            if (PontosVida == 0)
             {
                 Console.WriteLine($"{Nome} já está derrotado.");
                 return;
